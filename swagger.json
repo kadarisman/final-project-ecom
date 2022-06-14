@@ -1,0 +1,996 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0",
+      "title": "rismanShop",
+      "description": "Kadarisman dokumentasi API risman shop shop\n\nbase url : [https://final-project-ecom.herokuapp.com/](https://final-project-ecom.herokuapp.com/)",
+      "contact": {}
+    },
+    "host": "final-project-ecom.herokuapp.com",
+    "basePath": "/api",
+    "securityDefinitions": {},
+    "schemes": [
+      "https"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/users": {
+        "get": {
+          "summary": "Get User",
+          "tags": [
+            "users"
+          ],
+          "operationId": "GetUser",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        },
+        "post": {
+          "summary": "Add User",
+          "tags": [
+            "users"
+          ],
+          "operationId": "AddUser",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/AddUserRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/users/12": {
+        "put": {
+          "summary": "Update User",
+          "tags": [
+            "users"
+          ],
+          "operationId": "UpdateUser",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/UpdateUserRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/users/8": {
+        "delete": {
+          "summary": "Delete User",
+          "tags": [
+            "users"
+          ],
+          "operationId": "DeleteUser",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/products/8": {
+        "get": {
+          "summary": "Get Products",
+          "tags": [
+            "products"
+          ],
+          "operationId": "GetProducts",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        },
+        "put": {
+          "summary": "Update Product",
+          "tags": [
+            "products"
+          ],
+          "operationId": "UpdateProduct",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/UpdateProductRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/products/12": {
+        "delete": {
+          "summary": "Delete Product",
+          "tags": [
+            "products"
+          ],
+          "operationId": "DeleteProduct",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/products": {
+        "post": {
+          "summary": "Add Product",
+          "tags": [
+            "products"
+          ],
+          "operationId": "AddProduct",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/AddProductRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/stores": {
+        "get": {
+          "summary": "Get Store",
+          "tags": [
+            "stores"
+          ],
+          "operationId": "GetStore",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/stores/0": {
+        "put": {
+          "summary": "Update Store",
+          "tags": [
+            "stores"
+          ],
+          "operationId": "UpdateStore",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/UpdateStoreRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/orders": {
+        "get": {
+          "summary": "Get Orders",
+          "tags": [
+            "orders"
+          ],
+          "operationId": "GetOrders",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        },
+        "post": {
+          "summary": "Add Orders",
+          "tags": [
+            "orders"
+          ],
+          "operationId": "AddOrders",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/AddOrdersRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/orders/80": {
+        "put": {
+          "summary": "Update Orders",
+          "tags": [
+            "orders"
+          ],
+          "operationId": "UpdateOrders",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/UpdateOrdersRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/orders/8": {
+        "delete": {
+          "summary": "Delete Orders",
+          "tags": [
+            "orders"
+          ],
+          "operationId": "DeleteOrders",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/categories": {
+        "get": {
+          "summary": "Get Categories",
+          "tags": [
+            "categories"
+          ],
+          "operationId": "GetCategories",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        },
+        "post": {
+          "summary": "Add Categories",
+          "tags": [
+            "categories"
+          ],
+          "operationId": "AddCategories",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/AddCategoriesRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        },
+        "put": {
+          "summary": "Update Categories",
+          "tags": [
+            "categories"
+          ],
+          "operationId": "UpdateCategories",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/UpdateCategoriesRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/categories/15": {
+        "delete": {
+          "summary": "Delete Categories",
+          "tags": [
+            "categories"
+          ],
+          "operationId": "DeleteCategories",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          },
+          "security": [
+            {
+              "bearer": []
+            }
+          ]
+        }
+      },
+      "/login": {
+        "post": {
+          "summary": "Login",
+          "tags": [
+            "Login"
+          ],
+          "operationId": "Login",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/LoginRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "AddUserRequest": {
+        "title": "AddUserRequest",
+        "example": {
+          "name": "Yuzar Risman",
+          "email": "risman@gmailcom",
+          "password": "123",
+          "address": "Banda",
+          "status": 2
+        },
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "required": [
+          "name",
+          "email",
+          "password",
+          "address",
+          "status"
+        ]
+      },
+      "UpdateUserRequest": {
+        "title": "UpdateUserRequest",
+        "example": {
+          "name": "diriku sayang kamu",
+          "email": "eki@gmailcom",
+          "address": "sayang"
+        },
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "email",
+          "address"
+        ]
+      },
+      "AddProductRequest": {
+        "title": "AddProductRequest",
+        "example": {
+          "name": "asdasdsdsaf",
+          "store_id": "1",
+          "price": 1600000,
+          "description": "Kursi indaman Programmer",
+          "category_id": 11,
+          "status": 1,
+          "stock": 2,
+          "images": "default.png"
+        },
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "store_id": {
+            "type": "string"
+          },
+          "price": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stock": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "images": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "store_id",
+          "price",
+          "description",
+          "category_id",
+          "status",
+          "stock",
+          "images"
+        ]
+      },
+      "UpdateProductRequest": {
+        "title": "UpdateProductRequest",
+        "example": {
+          "name": "Laptop Acer12",
+          "store_id": "1",
+          "price": 12000000,
+          "description": "Laptop terbaik di kelasnya",
+          "category_id": 11,
+          "status": 1,
+          "stock": 12,
+          "images": "default.npg"
+        },
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "store_id": {
+            "type": "string"
+          },
+          "price": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stock": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "images": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "store_id",
+          "price",
+          "description",
+          "category_id",
+          "status",
+          "stock",
+          "images"
+        ]
+      },
+      "UpdateStoreRequest": {
+        "title": "UpdateStoreRequest",
+        "example": {
+          "name": "Risman",
+          "address": "Banda"
+        },
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "address"
+        ]
+      },
+      "AddOrdersRequest": {
+        "title": "AddOrdersRequest",
+        "example": {
+          "product_id": 8,
+          "price": 12000000,
+          "user_id": 14,
+          "dilevery_cost": 50000,
+          "count": 1,
+          "status": 1,
+          "order_time": "2022-06-12 14:15:01"
+        },
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "price": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "user_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dilevery_cost": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "order_time": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "product_id",
+          "price",
+          "user_id",
+          "dilevery_cost",
+          "count",
+          "status",
+          "order_time"
+        ]
+      },
+      "UpdateOrdersRequest": {
+        "title": "UpdateOrdersRequest",
+        "example": {
+          "product_id": 8,
+          "price": 12000000,
+          "user_id": 14,
+          "dilevery_cost": 10000,
+          "count": 1,
+          "status": 1,
+          "order_time": "2022-06-12 14:15:01"
+        },
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "price": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "user_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dilevery_cost": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "order_time": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "product_id",
+          "price",
+          "user_id",
+          "dilevery_cost",
+          "count",
+          "status",
+          "order_time"
+        ]
+      },
+      "AddCategoriesRequest": {
+        "title": "AddCategoriesRequest",
+        "example": {
+          "name": "Obat-Obatan"
+        },
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateCategoriesRequest": {
+        "title": "UpdateCategoriesRequest",
+        "example": {
+          "name": "Obat-Obatan 123"
+        },
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "LoginRequest": {
+        "title": "LoginRequest",
+        "example": {
+          "email": "risman1@gmail.com",
+          "password": "123"
+        },
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ]
+      }
+    },
+    "security": [],
+    "tags": [
+      {
+        "name": "users"
+      },
+      {
+        "name": "products"
+      },
+      {
+        "name": "stores"
+      },
+      {
+        "name": "orders"
+      },
+      {
+        "name": "categories"
+      },
+      {
+        "name": "Login"
+      }
+    ]
+  }
