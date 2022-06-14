@@ -82,7 +82,7 @@
           }
         }
       },
-      "/users/12": {
+      "/users/14": {
         "put": {
           "summary": "Update User",
           "tags": [
@@ -117,9 +117,7 @@
               "headers": {}
             }
           }
-        }
-      },
-      "/users/8": {
+        },
         "delete": {
           "summary": "Delete User",
           "tags": [
@@ -145,15 +143,130 @@
               "headers": {}
             }
           }
+        },
+        "get": {
+          "summary": "Get User By Id",
+          "tags": [
+            "users"
+          ],
+          "operationId": "GetUserById",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
         }
       },
-      "/products/8": {
+      "/products": {
         "get": {
           "summary": "Get Products",
           "tags": [
             "products"
           ],
           "operationId": "GetProducts",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        },
+        "post": {
+          "summary": "Add Product",
+          "tags": [
+            "products"
+          ],
+          "operationId": "AddProduct",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/AddProductRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/products/8": {
+        "get": {
+          "summary": "Get Products By Id",
+          "tags": [
+            "products"
+          ],
+          "operationId": "GetProductsById",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        },
+        "delete": {
+          "summary": "Delete Product",
+          "tags": [
+            "products"
+          ],
+          "operationId": "DeleteProduct",
           "deprecated": false,
           "produces": [
             "application/json"
@@ -210,71 +323,6 @@
           }
         }
       },
-      "/products/12": {
-        "delete": {
-          "summary": "Delete Product",
-          "tags": [
-            "products"
-          ],
-          "operationId": "DeleteProduct",
-          "deprecated": false,
-          "produces": [
-            "application/json"
-          ],
-          "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "required": false,
-              "default": "Bearer {token}",
-              "type": "string"
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "",
-              "headers": {}
-            }
-          }
-        }
-      },
-      "/products": {
-        "post": {
-          "summary": "Add Product",
-          "tags": [
-            "products"
-          ],
-          "operationId": "AddProduct",
-          "deprecated": false,
-          "produces": [
-            "application/json"
-          ],
-          "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "required": false,
-              "default": "Bearer {token}",
-              "type": "string"
-            },
-            {
-              "name": "Body",
-              "in": "body",
-              "required": true,
-              "description": "",
-              "schema": {
-                "$ref": "#/definitions/AddProductRequest"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "",
-              "headers": {}
-            }
-          }
-        }
-      },
       "/stores": {
         "get": {
           "summary": "Get Store",
@@ -282,6 +330,34 @@
             "stores"
           ],
           "operationId": "GetStore",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/stores/1": {
+        "get": {
+          "summary": "Get Store By Id",
+          "tags": [
+            "stores"
+          ],
+          "operationId": "GetStoreById",
           "deprecated": false,
           "produces": [
             "application/json"
@@ -403,7 +479,33 @@
           }
         }
       },
-      "/orders/80": {
+      "/orders/6": {
+        "get": {
+          "summary": "Get Orders By Id",
+          "tags": [
+            "orders"
+          ],
+          "operationId": "GetOrdersById",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        },
         "put": {
           "summary": "Update Orders",
           "tags": [
@@ -438,9 +540,7 @@
               "headers": {}
             }
           }
-        }
-      },
-      "/orders/8": {
+        },
         "delete": {
           "summary": "Delete Orders",
           "tags": [
@@ -529,6 +629,34 @@
               "headers": {}
             }
           }
+        }
+      },
+      "/categories/11": {
+        "get": {
+          "summary": "Get Categories By Id",
+          "tags": [
+            "categories"
+          ],
+          "operationId": "GetCategoriesById",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
         },
         "put": {
           "summary": "Update Categories",
@@ -564,9 +692,7 @@
               "headers": {}
             }
           }
-        }
-      },
-      "/categories/15": {
+        },
         "delete": {
           "summary": "Delete Categories",
           "tags": [
